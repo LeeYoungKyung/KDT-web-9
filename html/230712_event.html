@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script
+        src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+        crossorigin="anonymous">
+    </script>
+        <style>
+            .container{
+                height: 2000px;
+
+            }
+        </style>
+   
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="id">
+    </div>
+    <button type="button">버튼</button>
+    <script>
+        window.addEventListener("load",function(){})
+
+
+        
+        // $().on("click",function(){
+
+        // })
+        // $().on("mouseover",function(){
+        // })
+
+        //    $(window).ready(function(){
+        //     $(".container").append("<h1 class='red'>안녕<h1/>")
+            
+        //    })//둘다 가능
+
+            
+        
+        //  $(function(){//페이지로드 완료후 실행되는 함수
+        //         $(".container").append("<h1 class='red'>안녕<h1/>")
+        //     })
+
+        //on 이랑 eventListener이랑 같음
+
+
+        // $("button").click(function(){
+        //     alert("클릭")
+        // })
+
+        $("button").hover(function(){
+            alert("클릭")
+        })//hover하고 있는 동안 쭉 실행하겠다
+        $("button").mouseover(function(){
+            alert("클릭")
+        })//마우스가 올라 온 순간잠깐
+        
+        $(window).scroll(function(){
+            console.log("!!!")
+        })
+
+        $("input").keydown(function(e){
+            console.log(this)
+
+            console.log(e.key==="Enter")
+        })
+
+
+        //화살표 함수에서는 this 안써요
+
+    </script>
+    
+</body>
+</html>

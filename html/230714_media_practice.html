@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* @media 유형(screen/or)and 조건(크기) {
+            css적기            
+        }*/
+        /* 유형 : screen,all,print(:인쇄할때) */
+        /* 크기조건 max min-width max min-heigh */
+        /* max-width : 오른쪾에 나온 숫자 값 이하일 때 */
+        /* min-width : 오른쪽에 나온 숫자 값 이상일 때 */
+
+        body{
+            background-color: indianred;
+            color: red;
+        }
+        .box{
+            font-size: 100px;
+            
+        }
+        /* 700px일 때 아래 핑크 */
+        @media screen and (max-width : 700px) { 
+            body{
+            background-color: palevioletred;
+            color: wheat;
+        }}
+        @media screen and (max-width : 500px) { 
+            body{
+            background-color: tomato;
+            
+        }}
+        @media screen and (max-width : 300px) { 
+            body{
+            background-color: red;
+            
+        }
+
+        /* 순서 주의하긩 */
+
+
+
+
+        @media print {
+            .box{
+                display: none;
+
+            }
+        }
+            
+        } /* 화면이 screen이면서 700px이하일 때 바디에 백그라운드 컬러를 그린 */
+
+
+        /* body{
+            background-color: black;
+        } */
+/* 
+        @media screen and (min-width : 300px) {
+            body{
+                background-color: yellow;
+            }
+            
+            
+        }
+        @media screen and (min-width : 500px) {
+            body{
+                background-color: green;
+            }} */
+            /* 기본화면이 모바일이면 작은것 부터 적고 점점 늘어나는게 편할듯 min-width */
+            /* 기본화면이 윈도우이면 큰것 부터 적고 점점 줄어드는게 편할듯 min-width */
+
+            /* 가로세로 */
+
+
+            
+            /* 가로 */
+            @media screen and (orientation : landscape) {
+                body{
+                    background-color: blue;
+                }
+                
+            }
+            /* 세로 */
+            @media screen and (orientation : portrait) {
+                body{
+                    background-color: red;
+                }
+                
+            }
+
+    </style>
+
+</head>
+<body>
+    <div class="box">hello</div>
+</body>
+</html>

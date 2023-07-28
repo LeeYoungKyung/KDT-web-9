@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<!-- mouseover : 요소에 커서를 올렸을 때
+    mouseout : 요소를 벗어났을 때
+    mousedown : 누르고 있는 상태
+    mouseup : 마우스 버튼을 떼는 순간 -->
+
+
+    <button type="button">버튼</button>
+    <input type="text" name="id" placeholder="id를 입력해주세요." />
+
+    <input type="password" name="pw" id="pw" placeholder="비밀번호를 입력해주세요." />
+    <input type="password" name="pw_check" id="pw_check" placeholder="비밀번호를 입력해주세요." />
+    
+    <div style="width: 100px; height: 100px; background-color: red; transition: 1s;"></div>
+    
+    
+
+    <script>
+        let button = document.querySelector("button");
+
+            button.addEventListener("click", function() {
+                alert("클릭!")
+            })
+
+            let input = document.getElementById("pw")//하나만 선택
+            input.addEventListener("keyup", (e)=>{
+                if(e.key == "Enter") {
+                    alert("로그인!")
+                }
+            })
+
+            document.getElementById("pw_check").addEventListener("change", (e)=>{
+                if(input.value == e.currentTarget.value) {
+                    alert("같다")
+                } else{
+                    alert("다르다.")
+                }
+            })
+
+            window.addEventListener("resize", ()=>{
+                if(window.innerWidth >= 400) {
+                    console.log("크다");//화면의 크기가 400보다 크면 consol
+                }
+            })
+                
+
+
+        
+        // for(let i=0; i<input.length; i++){
+        //     input[i].addEventListener("focus", (e)=>{
+        //         e.currentTarget.style.backgroundColor = "black";
+        //     })}
+
+        //     input[i].addEventListener("blur", (e)=>{
+        //         e.currentTarget.style.backgroundColor = "initial";
+        //     })
+        // }
+
+
+        // // input.addEventListener("focus", (e)=>{
+        // //     // event, e, target
+        // //     // console.log(e.currentTarget)
+        // //     // input.style.backgroundColor = "black";
+        // //     e.currentTarget.style.backgroundColor = "black";
+        // // })
+
+
+        // // input.addEventListener("blur", (e)=>{
+        // //     // event, e, target
+        // //     // console.log(e.currentTarget)
+        // //     // input.style.backgroundColor = "black";
+        // //     e.currentTarget.style.backgroundColor = "yellow";
+        // // })
+    </script>
+</body>
+</html>

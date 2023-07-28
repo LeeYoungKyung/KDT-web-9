@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            width: 100%;
+            height: 60px;
+            background-color: #ddd;
+            padding: 0 20px;
+            margin-bottom: 50px;
+        }
+        span{
+            display: flex;
+            align-items: center;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        h1{
+            text-align: center;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            display: inline-block;
+           
+        }
+        li{
+            float: left;
+            
+        }
+        ul>li{
+            justify-content: flex-end;
+            text-align: right;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <h1>Flex를 이용해 여러 종류의 Header를 만들어보자!</h1>
+    <header class="header1">
+        <span>LOGO
+        <ul class="menus">
+          <li>MENU1</li>
+          <li>MENU2</li>
+          <li>MENU3</li>
+        </ul>
+        </span>
+        
+      </header>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+    <!-- <img src="public/z-index.png" alt="">
+    <img src="public/qjffo.png" alt="">
+    -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div class="apple"></div> 
+    <img src="public/fruits/apple.jpg" width="300" height="300" />
+    <br />
+    <button type="button" onclick="changeFruits('apple')">사과</button>
+    <button type="button" onclick="changeFruits('banana')">바나나</button>
+    <button type="button" onclick="changeFruits('grape')">포도</button>
+    <button type="button" onclick="changeFruits('peach')">복숭아</button>
+    <script>
+        
+        function changeFruits(fruit) {
+            // $("div").removeClass().addClass(fruit)
+            $("img").attr("src", `public/fruits/${fruit}.jpg`)
+        }
+    </script>
+</body>
+
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+
+        <% for (let i = 2; i <= 9; i++) { %>
+            <tr>
+                <td><%= i %>단</td>
+                <% for (let j = 1; j <= 9; j++) { %>
+                    <td><%= i %> × <%= j %> = <%= i*j %></td>
+                <% } %>
+            </tr>
+        <% } %>
+    </table>
+    
+    <img src="/public/apple" alt="">
+    
+
+</body>
+</html>
+

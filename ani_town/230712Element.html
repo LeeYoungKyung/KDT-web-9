@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+</head>
+<body>
+    값1 : <input type="text" name="값1" id="value1" value="" >
+    <br>
+    값2 : <input type="text" name="값2" id="value2" value="">
+    <br>
+    연산자 : <input type="text" name="연산자" id="center" value="">
+    <br>
+    결과 : <input type="text"  name="결과" id="result">
+    <br><br>
+
+    <button id="fin" onclick="input()">계산하기</button><button>초기화</button>
+
+    <script>
+        function input(){
+            
+            let value1 =  Number(document.getElementById("value1").value);
+            let value2 =  Number(document.getElementById("value2").value);
+            let center =  document.getElementById("center").value;  
+            let result = 0
+                       
+
+            
+            if(center=="+"){
+                result = value1+value2
+            }else if(center=="-"){
+                result=value1-value2
+            }else if(center=="/"){
+                result=value1/value2
+            }else{
+                result=value1*value2
+            }
+
+            document.getElementById("result").value = result
+        }
+    </script>
+</body>
+</html>

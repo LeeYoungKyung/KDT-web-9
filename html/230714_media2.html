@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .div {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            margin-bottom: 10px;
+            border-radius: 10%;
+            margin-left: 10px;
+            margin-right: 10px;
+            
+        }
+
+        @media screen and (max-width: 700px){
+            .container{
+                display: block;
+            }
+            .div {
+                background-color: skyblue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .back{
+            width: 800px;
+            height: 500px;
+            background: skyblue;
+        }
+        .first{
+            background-image: url("lion.png");
+            width: 100%;
+            height: 100%;
+            background-repeat: repeat-x;
+            background-position: center;
+        }
+        .back-y{
+            background-image: url("lion.png");
+            width: 100%;
+            height: 100%;
+            background-repeat: repeat-y;
+            background-position: center;
+        }
+        .second{
+            background-image: url("lion.png");
+            width: 100%;
+            height: 100%;           
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .third{
+            width: 100%;
+            height: 100%;
+            background-image: url("lion.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="back">
+        <div class="first"></div>
+    </div>
+
+    <div class="back">
+        <div class="back-y"></div>
+    </div>
+
+    <div class="back">
+        <div class="second"></div>
+    </div>
+    <div class="back">
+        <div class="third"></div>
+    </div>
+        
+</body>
+</html>

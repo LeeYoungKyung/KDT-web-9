@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+        src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+        crossorigin="anonymous">
+    </script>
+
+    <style>
+        tr > :first-child{
+            color: red;
+        }
+        tr > :last-child{
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+
+    날짜 : <input type="text" id="date">
+    <br>
+    내용 : <input type="text" id="sk">
+    <br>
+    <button id="done">작성</button>
+
+    <h1>2023년 7월</h1>
+
+    <table width = "500" height = "400">
+        <th>일</th>
+        <th>월</th>
+        <th>화</th>
+        <th>수</th>
+        <th>목</th>
+        <th>금</th>
+        <th>토</th>
+    </tr>
+    <br>
+    <tr>
+        <td colspan="6"></td>
+        <!-- <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td> -->
+        <td>1</td>
+    </tr>
+    <br>
+    <tr>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+    </tr>
+    <br>
+    <tr>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+    </tr>
+    <br>
+    <tr>
+        <td>16</td>
+        <td>17</td>
+        <td>18</td>
+        <td>19</td>
+        <td>20</td>
+        <td>21</td>
+        <td>22</td>
+    </tr>
+    <br>
+    <tr>
+        <td>23</td>
+        <td>24</td>
+        <td>25</td>
+        <td>26</td>
+        <td>27</td>
+        <td>28</td>
+        <td>29</td>
+    </tr>
+    <br>
+    <tr>
+        <td>30</td>
+        <td>31</td>
+    </tr>
+    </table>
+    
+
+    <script>
+        let td ; null;
+
+        $('td').on('click',function(obj){
+            let date = $(this).text()
+            console.log(date)
+            $("#date").val(date)
+            td=this
+        })
+        
+
+        $("button").on("click",function(){
+            let content = $("#sk").val()
+            $(td).parent().append(`<div>${content}<div/>`)
+
+        })
+        //e.currentTarget으로 받아올 수도 있음==function(e){
+            //console.log(e.currentTarget)
+            //1. 클릭요소의 날짜
+           // $(this).text()
+            //2. input #day 선택해서 1번값 넣기 
+            
+        // }
+
+
+     
+
+        var input = $("day").val()
+        console.log(input)
+
+
+        let day = date
+        console.log(day)
+
+
+        // $('date').add('text',function(todo){
+        //     let list = document.getElementById('day','sk').value
+        //     console.log(list)
+        // })
+       
+        
+
+    </script>
+</body>
+</html>

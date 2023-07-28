@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    //     number =[(1,100,1)]
+    //     sum = 0
+    //     for(let i=1; i<=100;i++){
+    //         sum+=i   
+          
+    //      }
+    //      console.log(sum)
+
+    //    sum=0
+    //     for (let i=0;i< number.length; i++){
+            
+    //         sum=+i
+    //     }
+    //     console.log(sum);
+
+    //   array.forEach(element => {
+        
+    //   });
+        
+
+    let numbers = [];
+    for(let i=1; i<=100;i++){
+        numbers.push(i);
+
+    }
+    console.log(numbers);
+    sum=0
+    for(let i=0;i<numbers.length; i++){
+        sum +=numbers[i];
+    }
+    console.log(sum);
+
+    sum=0
+    for(let n of numbers){
+        sum += n;
+    }
+    console.log(sum);
+    sum=0
+    numbers.forEach((data)=>{
+        sum+=data;
+    })
+    console.log(sum);
+        </script>
+</body>
+</html>

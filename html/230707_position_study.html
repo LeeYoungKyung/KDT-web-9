@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con{
+            position: relative;
+            background-color: red;
+            height: 500px;
+            width: 500px;
+        }
+        .color{
+            background-color: purple;
+            width: 100px;
+            height: 100px;
+            
+        }
+
+        .item1{
+            position: relative;
+            left: 50px;
+            top: 30px;
+        }
+        .item2{
+            position: absolute;
+            right: 30px;
+            bottom: 100px;
+            
+        }
+        .item3{
+            position: fixed;
+            right: 100px;
+            top: 100px;
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="item1 color"></div>
+        <div class="item2 color"></div>
+        <div class="item3 color"></div>
+    </div>
+    
+</body>
+</html>

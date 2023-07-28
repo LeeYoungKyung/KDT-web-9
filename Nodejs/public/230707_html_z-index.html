@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .parents{
+            position: relative;
+            
+        }
+        .back{
+            position: relative;
+            width: 100px;
+            height: 200px;
+            z-index: 999;
+       
+        }
+        .eyew{
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: black;
+            z-index: 10;
+            top: 40px;
+            left: 20px;
+        }
+        .eyeb{
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: white;
+            z-index: 9;
+            top: 35px;
+            left: 15px;
+        }
+        .one{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: aqua;
+          
+
+        }
+        .two{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: aquamarine;
+            left: 50px;
+            top: 40px;
+           
+
+        }
+        .three{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: blue;
+            left: 110px;
+            top: 70px;
+            
+        }
+        .four{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: blueviolet;
+            left: 180px;
+            top: 85px;
+           
+
+        }   
+        
+
+        .five{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: navy;
+            left: 250px;
+            top: 75px;
+            z-index: 800;
+        
+            
+        }
+     
+    </style>
+</head>
+<body>
+    
+    <div class="parents">
+        <div class="eyew"></div>
+        <div class="eyeb"></div>
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five"></div>
+        <img src="../html/z-index.png" alt="back">
+    </div>
+ 
+</body>
+</html>

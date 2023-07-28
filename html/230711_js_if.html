@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //조건에 따라 다른 코드를 실행시키는 문법
+        
+        let age = Number(prompt("나이를 입력하세요"));
+        let sex = prompt("성별을 입력하세요(여or남)")
+        if (age>=20){
+            if(sex=="여"){
+                console.log("성인 여자")
+            }else{
+                console.log("성인 남자")
+            }
+            
+        } else if(age>=17){
+            if(sex=="여"){
+                console.log("고등학생 여자")
+            }else{
+                console.log("고등학생 남자")
+            }
+            
+        }else if(age>=14){
+            if(sex=="여"){
+                console.log("중학생 여자")
+            }else{
+                console.log("중학생 남자")
+            }
+            
+        }else if(age>=8){
+            if(sex=="여"){
+                console.log("초등학생 여자")
+            }else{
+                console.log("초등학생 남자")
+            }
+        } 
+        else{
+            console.log("유아")
+        }
+
+        
+
+        // if(){
+
+        // }else if(){
+
+        // }else{
+
+        // }
+        
+    </script>
+</body>
+</html>

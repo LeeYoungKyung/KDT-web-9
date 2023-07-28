@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+        }
+        .red{
+            background-color: red;
+        }
+        .orange{
+            background-color: orange;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .green{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- 아이디는 하나만 -->
+    
+    <div class="container">
+        <div id="red" class="box red"><span>빨간상자</span></div> 
+        <div id="orange" class="box orange"></div>
+        <div class="box yellow"></div>
+        <div class="box green"></div>
+        <button type="button" onclick="redToggle()">깜빡깜빡</button>
+        
+    </div>
+    <button type="button"  onclick="createBox()">생겨라</button>
+    <button type="button"  onclick="removeBox()">사라져</button>
+
+    
+
+
+    <script>
+
+        function removeBox(){
+            let orangeBox=document.getElementById("orange")
+            orangeBox.remove()
+        }
+       
+        console.log(container)//하나만
+        
+
+        console.log(container.children)
+        
+        let redBox = document.getElementById("red")
+        redBox . setAttribute("class","box orange")
+
+        console.log(container.children.length-1)//마지막 자식
+        console.log(redBox.parentNode)//특정요소의 부모
+
+        console.log(redBox.nextElementSibling)//다음자식 orange
+
+        
+        console.log(orangeBox.previousElementSibling)//이전자식 red
+
+
+        function createGreenBox(){
+            let createBox = document.createElement('box green')
+            createBox.className="box green"
+
+            // container.prepend(createBox)//첫번째요소
+
+            
+            orangeBox.before(createBox)
+            // after()
+        }
+        let container = document.querySelector(".container")
+        
+
+
+
+        // function redToggle(){
+        //     let redBox = document.getElementById("red")
+        //     redBox.classList.toggle("red")
+
+            // let redBox2 = document.getElementsByClassName("red")
+            // redBox[0].classList.toggle("red")
+
+             // if(redBox.classList.contains("red"))
+            //     redBox.classList.remove("red")
+            //     else{
+            //         redBox.classList.add("red")
+            //     } 둘이 같음
+        
+
+
+
+            // if(redBox.classList.contains("red"))
+            //     redBox.classList.remove("red")
+            //     else{
+            //         redBox.classList.add("red")
+            //     }
+        //}
+
+        // let redBoxByID = document.getElementById("red")//요소하나 선택
+        // console.log(redBoxByID)
+        
+        // //나머지 3개는 무조건 배열에 담긴다
+        // let boxes = document.getElementsByClassName("box")//class는 여러개 가능 , 배열로 정리
+        // console.log(boxes)
+
+     
+
+
+        // let boxesByTag = document.getElementsByTagName("div")
+        // console.log(boxesByTag)
+        
+        // let input = document.getElementsByClassName("id")
+        // console.log(input)
+
+        // let boxesBySelector = document.querySelector(".box")//무조건 하나만 , 배열형태 아님,젤위에꺼 읽음
+        // console.log(boxesBySelector)
+
+        // let boxesBySelectorAll = document.querySelectorAll(".box")
+        // console.log(boxesBySelectorAll)
+        // let orangeboxesBySelectorAll = document.querySelectorAll("#orange")
+        // console.log(boxesBySelectorAll)
+
+        // document.write("안녕?")
+        // let redBox = document.getElementById("red")
+        // let orangebox = document.getElementById("orange")
+        // redBox.innerText="aaa" //택스트 글 바꾸기
+        // console.log(redBox.innerText)
+        // console.log(redBox.innerHTML)//안에있는거 다 가져옴(태그도 가져옴)ex) <span>빨간상자<span/>
+        // console.log(redBox.textContent)
+
+        // console.log(redBox.className)
+        // // redBox.className = "box yellow"
+        // console.log(redBox.classList.add())
+
+
+        
+    </script>
+</body>
+</html>

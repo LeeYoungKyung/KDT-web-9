@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fruits div:first-child{
+            color: red;
+        }
+        .fruits *:nth-child(2){
+            background-color: green;
+        }
+        /*content
+        .example 클래스의 젤 처음과 젤 앞에 입력됨*/
+        .example::after{
+            content: "🐻";
+        }
+        .example::before{
+            content: "❤️";    
+        }
+        .box::after{
+            content: "택시";
+        }
+        .box::before{
+            content: "빨리";
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">여기요!</div>
+
+    <div class="fruits">
+        <div>바나나</div>
+        <span>딸기</span>
+        <span>수박</span>
+        <div>오렌지</div>
+        <p>망고</p>
+        <h3>사과</h3>
+    </div>
+    <div class="example">
+        바로가기
+    </div>
+
+    
+    
+</body>
+</html>

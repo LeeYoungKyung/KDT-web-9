@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let now = new Date()//현재시간 230712 수요일 기준
+        let expired = new Date('2023-07-12')
+        console.log(now)
+        console.log(expired)
+        console.log(now.getFullYear()) //년도
+        console.log(now.getMonth()+1)//월인데 -1로 나옴
+        console.log(now.getDate()) //일
+        console.log(now.getDay())//3==수요일 요일을 숫자로 반환
+        console.log(now.getTime() >=expired.getTime)//1970년 1월1일기준 지금까지 시간
+        
+        console.log(`${now.getFullYear()}-${now.getMonth()}-${now.getDay()}`)
+        
+        console.log(Math.PI)
+        console.log(Math.E)
+        console.log(Math.min(2,5,6,7,))
+        console.log(Math.random())
+        console.log(Math.round(7.9),Math.round(8.2))
+        console.log(Math.floor(7.9),Math.ceil(8.2))
+        console.log(Math.floor(Math.random()*100))
+        
+     </script>
+</body>
+</html>
