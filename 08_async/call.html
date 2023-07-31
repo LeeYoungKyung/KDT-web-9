@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //callback hell
+        // setTimeout(function(){
+        //     document.body.style.backgroundColor='red'
+        //     setTimeout(function(){
+        //         document.body.style.backgroundColor='orange'
+        //         setTimeout(function(){
+        //             document.body.style.backgroundColor='yellow'
+        //             setTimeout(function(){
+        //                 document.body.style.backgroundColor='green'
+        //                 setTimeout(function(){
+        //                      document.body.style.backgroundColor='blue'
+        //                 },1000)
+        //             },1000)
+        //         },1000)
+        //     },1000)
+        // },1000)
+        function changeBackgroundColor(color, delay) {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    document.body.style.backgroundColor = color;
+                    resolve();
+                }, delay);
+            });
+        }
+        changeBackgroundColor('red',1000).then(()=>changeBackgroundColor('orange',1000))
+        .then(()=>changeBackgroundColor('yellow',1000))
+        .then(()=>changeBackgroundColor('green',1000))
+        .then(()=>changeBackgroundColor('blue',1000))
+        .catch((error)=>console.error(error));
+
+
+        // promise1(true)
+        // .then( function(result){
+        //     console.log(result);
+
+        // })
+        
+
+    </script>
+</body>
+</html>
