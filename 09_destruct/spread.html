@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a=[1,2,3];
+        const b=[4,5];
+        //기본 방식
+        const concat =a.concat(b);
+        console.log('concat',concat)
+        //바뀐 문법
+        const spread = [...a,...b]
+
+        const person ={
+            name:"yk",
+            age :23,
+        }
+        console.log({...person})
+
+        const c ="hello"
+        console.log([...c])
+        //결과 : [h,e,l,l,o]
+
+        //rest파라미터
+        function ge(a){
+            console.log(a);
+        }
+        get(10);
+
+
+        function get(a,...rest){
+            console.log(a,rest);
+        }
+        get(10);
+
+        //class
+        class Cat {
+            //생성자
+            constructor(name,age){
+                this.name=name;
+                this.age=age;
+            }
+
+            //메소드
+            mew(){
+                console.log('야용')
+            }
+            eat(){
+                console.log('먹이를 먹는다')
+            }
+
+        }
+        const cat1=new Cat('나비',1);
+        const cat2=new Cat('냥이',1);
+        cat1.mew();
+        cat2.eat();
+        cat2.mew();
+
+
+    </script>
+</body>
+</html>

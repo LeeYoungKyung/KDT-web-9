@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //배열 구조 분해
+        const lists = ['apple','grape'];
+        //기존 방식
+        console.log(lists[0],lists[1])
+        //구조분해
+        [item1,item2]=lists
+        console.log('item1:',item1,'item2:',item2);
+        item1='peach'
+        console.log(item1);
+
+
+
+        //교환
+        // const x =1, y=3
+        // [x,y]=[y,x]// 안바뀜 
+
+        // let x =1, y=3
+        // [x,y]=[y,x]// 바뀜
+        
+        const Person = {
+            name : "yk",
+            age : 23,
+            gender : 'F',
+            friends : ['alex','kevin'],
+            hello:function(){
+                console.log('hello');
+            }
+        };
+        console.log(Person.name);//. 접근제어 연산자  : .name으로 값 가져옴 
+        Person.city='seoul'
+        //함수명 . 원하는 키 
+        //person.name
+        // age:myage age의 객체를 myage로 바꿔주는 
+        //배열은 순서가 중요하지만 
+        //집합은 객체가 중요하다.
+        const{name,city,gender}=Person
+    </script>
+</body>
+</html>
