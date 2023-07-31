@@ -46,3 +46,14 @@ app.listen(PORT,()=>{
 })
 
 
+app.get('/fruit', (req, res) => {
+    res.render('fruit', {
+        fruit: [
+            { name: 'apple', kor: '사과' },
+            { name: 'banana', kor: '바나나' },
+            { name: 'grapes', kor: '포도' },
+            { name: 'peach', kor: '복숭아'},
+        ],
+    });
+});
+
