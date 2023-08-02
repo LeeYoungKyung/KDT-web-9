@@ -9,10 +9,10 @@
     <body>
         <h1>POST 실습</h1>
         <form>
-            <label for="username">아이디</label>
+            <label for="username">id</label>
             <input type="text" id="username" required />
             <br />
-            <label for="password">패쓰워드</label>
+            <label for="password">pw</label>
             <input type="password" id="password" required />
             <br />
             <button type="button" onclick="login()">로그인</button>
@@ -41,7 +41,7 @@
                         resultBox.textContent = `${userInfo.username}님 환영합니다.`;
                         resultBox.style.color = 'blue';
                     } else {
-                        resultBox.textContent = '아이디 또는 패쓰워드가 틀렸습니다';
+                        resultBox.textContent = 'id or pw가 틀렸습니다';
                         resultBox.style.color = 'red';
                     }
                 });
