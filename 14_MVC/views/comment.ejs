@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>댓글 모음</h1>
-    <a href="/">홈으로 이동하기</a>
-    <ul>
-        <%for(let i = 0; i < commentInfos.length; i++) {%>
-            <li>
-                <b><%= commentInfos[i].userId %></b>
-                <a href="/comment/<%= i+1 %>"><%= commentInfos[i].comment %></a>
-            </li>
-        <%}%>
-    </ul>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1><%= commentInfo.userId %>님의 댓글입니다.</h1>
+        <a href="/comments">댓글 목록 보기</a>
+        <div>
+            <p>작성일: <%= commentInfo.date %></p>
+            <p>댓글 내용: <%= commentInfo.comment %></p>
+        </div>
+    </body>
 </html>
