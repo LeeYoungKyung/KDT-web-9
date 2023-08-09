@@ -33,3 +33,8 @@ exports.post_signin = (data, callback) => {
         callback(rows);
     });
 };
+
+
+exports.edit_profile = (data,callback)=>{
+    const query = ""
+}
