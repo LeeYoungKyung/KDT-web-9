@@ -16,11 +16,13 @@ const cookieConfig = {
 }
 app.get('/', (req, res) => {
     res.render('index');
+    //res.render('index',{popup:req.cookies.modal})
 });
+
 
 app.get('/modal', (req, res) => {
     res.cookie('notmore', 'not-modal', cookieConfig)
-    res.send({result: true});
+    res.send({result: true, msg:'close cookie'});
 })
 
 app.get('/checkCookie', (req, res) => {

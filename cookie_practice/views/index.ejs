@@ -32,38 +32,30 @@
         </div>
       </div>
 
-    
+
       <script>
-        let cookiecheck = false;
-
-
-
+        let cookieCheck = false;
+        //show 수동으로 보여줌
+        //hide를 주어서 쿠키에 하이드가 들어가면 안보이게 하는 것
+        //<%=  %>
 
         function close_btn() {
         const modal_checkbox = document.querySelector("input");
         
-
             if (modal_checkbox.checked) {
                 axios({
                     method: 'GET',
                     url: '/modal',
                 }).then((res) => {
                   if(res.data.result) {
-                    cookiecheck = true;
+                    cookieCheck = true;
                     
                   }
                 });
-
             }
         }
-
-
-
-
-
-
         if (!cookieCheck) {
-          axios.get('/cookiecheck')
+          axios.get('/cookieCheck')
             .then(res => {
                 if (!res.data.hasCookie) {
                     $(document).ready(function() {

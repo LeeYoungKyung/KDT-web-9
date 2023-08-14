@@ -1,0 +1,11 @@
+{
+  "name": "kdt-web-9",
+  "version": "1.0.0",
+  "description": "포스코x코딩온 웹 개발자 양성 부트캠프 9기 수업 코드",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
