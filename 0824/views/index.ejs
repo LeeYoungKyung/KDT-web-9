@@ -11,4 +11,11 @@
         <a href="/signin">로그인페이지</a>
         <a href="/signup">회원가입페이지</a>
     </body>
+    <script>
+        //ejs에서 자바스크립트 변수값 사용하기 위해서는 문자열 처리
+        console.log('<%= cookie %>');
+        if ('<%= cookie %>' === 'false') {
+            alert('로그인해 주세요');
+        }
+    </script>
 </html>

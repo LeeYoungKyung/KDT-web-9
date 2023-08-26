@@ -24,4 +24,7 @@ router.get('/profile/buy', controller.buy);
 //회원탈퇴
 router.delete('/destroy', controller.destroy);
 
+//전체회원 조회
+router.get('/members', controller.members);
+
 module.exports = router;
