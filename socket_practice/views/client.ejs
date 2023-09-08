@@ -19,7 +19,12 @@
 
         <script>
             const socket = new WebSocket('ws://localhost:8000');
+            //웹 소켓을 사용하여 로컬 호스트의 8000번 포트에 연결하는 것을 목적
+            //연결을 통해 웹 브라우저와 서버 간에 양방향 통신
             const resultOne = document.querySelector('#resultOne');
+            // HTML 문서 내에서 id가 "resultOne"인 요소를 선택하고, 
+            //선택한 요소를 resultOne 변수에 저장하는 역할을 합니다. 
+            //이후에 resultOne 변수를 사용하여 해당 HTML 요소를 조작하거나 변경
             const resultTwo = document.querySelector('#resultTwo');
             const typeOne = document.querySelector('#typeOne');
             const typeTwo = document.querySelector('#typeTwo');
@@ -27,6 +32,7 @@
             typeOne.addEventListener('click', () => {
                 socket.send(JSON.stringify({ vote: 'typeOne' }));
             });
+            // JavaScript 객체나 값을 JSON 문자열로 변환하는 역할
             typeTwo.addEventListener('click', () => {
                 socket.send(JSON.stringify({ vote: 'typeTwo' }));
             });
@@ -43,6 +49,7 @@
                 const parse = JSON.parse(event.data);
                 resultOne.textContent = parse.typeOne;
                 resultTwo.textContent = parse.typeTwo;
+                //textContent를 사용하여 해당 div 요소의 텍스트 내용을 가져올 수 있다
             });
 
             //오류이벤트
