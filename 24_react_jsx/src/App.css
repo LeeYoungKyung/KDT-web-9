@@ -23,7 +23,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.container {
+.all {
   display: flex;
 }
 .red{
@@ -32,17 +32,17 @@
   height: 100px;
 }
 
-.ora{
+.orange{
   background-color: orange;
   width: 100px;
   height: 150px;
 }
-.yell{
+.yellow{
   background-color: yellow;
   width: 100px;
   height: 200px;
 }
-.gree{
+.green{
   background-color: green;
   width: 100px;
   height: 250px;
@@ -57,7 +57,7 @@
   width: 100px;
   height: 350px;
 }
-.po{
+.purple{
   background-color: purple;
   width: 100px;
   height: 400px;

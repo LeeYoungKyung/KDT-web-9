@@ -4,6 +4,9 @@ import './App.css';
 function App() {
     const flag = false;
     let txt = '';
+    const name = '로이';
+    const animal = '강아지';
+    const title = 'Hello World';
 
     if (flag) {
         txt = 'true 입니다';
@@ -47,6 +50,37 @@ function App() {
 
     return (
         <>
+        {/* 실습1번 */}
+            <div>
+                이것은 div입니다
+                <h3>이것은 div안에있는 h3태그 입니다</h3>
+            </div>
+            <div>{3 + 5 == 5 ? <p>정답입니다</p> : <p>오답입니다</p>}</div> 
+            {/* 실습 2번 */}
+            <h2>
+                제 반려동물의 이름은 <u>{name}</u>입니다.
+                <br />
+                <u>{name}</u>는 {animal}입니다.
+            </h2>
+{/* 실습 3번 */}
+            <div className="text">{title}</div>
+            <div className="input">
+                아이디: <input />
+                <br />
+                <br />
+                비밀번호: <input />
+            </div> 
+
+            {/* 실습 4번 */}
+            <div className="all">
+                <div className="red"></div>
+                <div className="orange"></div>
+                <div className="yellow"></div>
+                <div className="green"></div>
+                <div className="blue"></div>
+                <div className="navy"></div>
+                <div className="purple"></div>
+            </div>
             <h1 style={{ backgroundColor: 'black', color: 'white' }}>Hello React</h1>
             {isLogin && (
                 <>
