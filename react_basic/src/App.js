@@ -1,22 +1,28 @@
-import ClassComponent from "./ClassComponent";
-import FunctionComponent from "./FunctionComponent";
-import './App.css';
-import EventClass from "./EventClass";
-function App() {
-  return (
-     <>
-  
-  <ClassComponent></ClassComponent> 
-   <FunctionComponent></FunctionComponent>
-  <ClassComponent></ClassComponent>
-  <ClassComponent></ClassComponent> 
-  <ClassComponent></ClassComponent>
-  <FunctionComponent myClass={"kdt9"}></FunctionComponent>
-  <FunctionComponent></FunctionComponent>
 
-  <EventClass/>
+// import Practice1 from './practice1';
+// import CounterFunc from './CounterFunc';
+// import Practice2 from './Practice2';
+import Color from "./Color";
+// import CounterFunc from "./CounterFunc";
+import BoardSearchFun from "./BordSearchFunc";
+import ToggleFunc from "./ToggleFunc";
+import LifeCycleClass from "./LifeCycleClass";
+// import ToDo from "./ToDo";
+
+function App() {
+
+  return <>
+    {/* <Counter/> */}
+    {/* <Practice1/> */}
+    {/* <Practice2/> */}
+    {/* <CounterFunc/> */}
+    <ToggleFunc></ToggleFunc>
+    <Color/>
+    <BoardSearchFun/><br/>
+    {/* <ToDo></ToDo> */}
+    <LifeCycleClass></LifeCycleClass>
   </>
-  )
+
 }
 
  
