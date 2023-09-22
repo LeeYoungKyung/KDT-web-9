@@ -47,6 +47,8 @@ function BoardSearchFun() {
                     작성
                 </button>
             </form>
+
+            
             <form>
                 <select value={searchType} onChange={(e) => setSearchType(e.target.value)}>
                     <option value="writer">작성자</option>
