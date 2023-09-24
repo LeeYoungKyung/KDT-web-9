@@ -8,6 +8,8 @@
 // import ToggleFunc from "./ToggleFunc";
 // import LifeCycleClass from "./LifeCycleClass";
 import LifeCycleFunction from "./LifeCycleFunction";
+import LifePrac2 from "./LifePrac2";
+
 // import ToDo from "./ToDo";
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
     {/* <ToDo></ToDo> */}
     {/* <LifeCycleClass></LifeCycleClass> */}
     <LifeCycleFunction/>
+    <LifePrac2></LifePrac2>
   </>
 
 }
