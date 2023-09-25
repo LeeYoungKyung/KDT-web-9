@@ -12,15 +12,13 @@ router.post('/signin', controller.post_signin); //로그인하기
 
 //회원정보수정 기능
 //회원정보조회 =>GET
-//get 조회 방식일 때는 url을 query string 또는 파라미터 방식으로 지정
-//query string 방식은 페이지 이동을 안하며 파라키터는 페이지를 이동(res.render일 때 )
-
-router.get('/profile/:number',controller.profile)
-
-router.patch('/profile/edit',controller.edit_profile)
+//GET 조회 방식이때는 url을 query string 또는 파라미터 방식으로 지정
+//query string방식은 페이지 이동을 안하며 파라미터는 페이지를 이동(res.render)
+router.get('/profile/:number', controller.profile);
 //회원정보수정 =>PATCH
+router.patch('/profile/edit', controller.edit_profile);
 
-// //ex) 회원 구매목록을 만든다 젤 위에 있어야 함 ㅜ 왱?
-// router.get('/profile/but',null)
+//예시) 회원 구매목록
+router.get('/profile/buy', controller.buy);
 
 module.exports = router;

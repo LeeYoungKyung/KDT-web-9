@@ -83,10 +83,11 @@
                 <select id="userList"></select>
                 <input type="text" id="message" placeholder="메세지 입력" />
                 <button>입력</button>
+                <button type="button" onclick="del()">나가기</button>
             </form>
         </div>
-
-        <script>
+        
+        <script>         
             const socket = io();
             const roomForm = document.querySelector('#room');
             const chatForm = document.querySelector('#chat');

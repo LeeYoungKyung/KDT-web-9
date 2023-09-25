@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Document</title>
+    <style>
+      #chatBox {
+        background-color: #c7d6e0;
+        width: 400px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+     
+      }
+      #message{
+        width: 400px;
+      }
+
+      .bubble {
+        width: fit-content;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+      }
+      #chatChat {
+        background-color: yellow;
+        margin-left: auto; 
+
+      }
+      #others {
+        flex-direction: row-reverse;
+        background-color: wheat;
+
+      }
+      .reply {
+        width: 300px;
+        background-color: white;
+        display: flex;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="chatBox"></div>
+    <form class="reply" id="chat">
+      <input type="text" id="message" placeholder="메세지를 입력하세요" />
+      <button>보내기</button>      
+    </form>
+    <br /><br />
+    <button type="button" onclick="leave()">나가기</button>
+    <script>
+      const chatForm = document.querySelector('#chat');
+      const chatBox = document.querySelector('#chatBox');
+
+      const socket = io();
+
+      
+      const chatRoom = prompt('채팅방명을 입력하세요');
+      socket.emit('join', chatRoom);
+
+ 
+      socket.on('create', (res) => {
+        const msgBox = document.createElement('div');
+        msgBox.textContent = res;
+        chatBox.appendChild(msgBox);
+      });
+
+      socket.on('chat', (message) => {
+        const msgBox = document.createElement('div');
+        msgBox.id = 'others';
+        msgBox.classList.add('bubble');
+        msgBox.textContent = message;
+        chatBox.appendChild(msgBox);
+      });
+
+
+      chatForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const msg = chatForm.querySelector('#message');
+        const msgBox = document.createElement('div');
+        msgBox.id = 'chatChat';
+        msgBox.classList.add('bubble');
+        msgBox.textContent = msg.value;
+        chatBox.appendChild(msgBox);
+
+        socket.emit('sendMessage', msg.value);
+        msg.value = '';
+      });
+
+      function leave() {
+        console.log('leave');
+        socket.emit('leave');
+      }
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>Hello world!</div>
+    <ul id="messageList"></ul>
+    <form id="chat">
+        <button id="hello" name="hello">hello</button>
+        <button id="study" name="study">study</button>
+        <button id="bye" name="bye">bye</button>
+    </form>
+
+    <script>
+        const helloButton = document.getElementById('hello');
+        const studyButton = document.getElementById('study');
+        const byeButton = document.getElementById('bye');
+
+        const messageList = document.getElementById('messageList');
+
+        helloButton.addEventListener('click', function() {
+            const buttonName = helloButton.getAttribute('name');
+            console.log('button name:', buttonName);
+        });
+
+        studyButton.addEventListener('click', function() {
+            const buttonName = studyButton.getAttribute('name');
+            console.log('button name:', buttonName);
+        });
+
+        byeButton.addEventListener('click', function() {
+            const buttonName = byeButton.getAttribute('name');
+            console.log('button name:', buttonName);
+        });
+
+        const socket = io();
+
+        socket.emit('open_message', { hello: 'world' }, (res) => {
+            console.log(res);
+        });
+
+        socket.on('backend_message', (arg) => {
+            const li = document.createElement('li');
+            li.textContent = `${arg.message}`;
+            messageList.appendChild(li);
+        });
+
+        const chatForm = document.getElementById('chat');
+        const user = document.getElementById('user'); // Assume you have an input element with id 'user'
+        const message = document.getElementById('message'); // Assume you have an input element with id 'message'
+
+        chatForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // socket.emit('form_message', { name: user.value, message: message.value });
+        });
+    </script>
+</body>
+</html>

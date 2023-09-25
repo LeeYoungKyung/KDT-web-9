@@ -24,7 +24,7 @@ const comment = (req,res) => {
 module.exports = {
     main : main,
     comm : comments,
-    comment
+    comment,
 } 
 // //하나를 보내는 것
 // module.exports.main = "함수,변수,문자열,숫자"
