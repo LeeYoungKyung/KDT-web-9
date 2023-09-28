@@ -1,9 +1,9 @@
-import './SassComponent.scss';
+import "./SassComponent.scss";
 
-export default function SassComponent(){
-    return(
-        <>
-            {/* <div className="container">
+export default function SassComponent() {
+  return (
+    <>
+      {/* <div className="container">
         <div className="one">
             <div className="white-eye">
                 <div className="black-eye"></div>
@@ -14,11 +14,10 @@ export default function SassComponent(){
         <div className="four"></div>
         <div className="five"></div>
     </div> */}
-    
-        <div className="cir-one"></div>
-        <div className="cir-two"></div>
-        <div className="cir-three"></div>
-    
-        </>
-    )
+
+      <div className="cir-one"></div>
+      <div className="cir-two"></div>
+      <div className="cir-three"></div>
+    </>
+  );
 }
