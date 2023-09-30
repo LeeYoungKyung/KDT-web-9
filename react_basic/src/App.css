@@ -1,6 +1,6 @@
-/* .container {
+.container {
     position: relative;
-} */
+}
 
 .container > div {
   width: 100px;
