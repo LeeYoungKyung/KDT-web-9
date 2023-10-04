@@ -1,27 +1,42 @@
-// import SignupForm from "./10hook/SignupForm";
+// import { useState } from "react";
+// import MyContext, {
+//   LanguageProvider,
+// } from "./13Form/14Context/store/lang-context";
 
-import { Outlet } from "react-router-dom";
-import Header from "./12Router/Header";
+import Prac from "./13Form/prac";
 
-// import StylePrac4 from "./11Style/StylePrac4";
-// import StyledComponent from "./11Style/StyledComponent";
-
-// import SassComponent from "./11Style/SassComponent";
-
-// import Style from "./11Style/Style";
+// import LanguageSelector from "./13Form/14Context/store/LangSelector";
 
 function App() {
+  // const [language, setLanguage] = useState("ko");
   return (
     <>
-      {/* <StylePrac4 /> */}
-      {/* <SignupForm/> */}
-      {/* <Style/> */}
-      {/* <SassComponent/> */}
-      {/* <StyledComponent /> */}
-      {/*       
-      <Router /> */}
-      <Header />
-      <Outlet />
+      <Prac />
+      {/* <LanguageProvider>
+        <LanguageSelector />
+      </LanguageProvider> */}
+      {/* <MyContext.Provider
+        value={{ language: language, setLanguage: setLanguage }} */}
+      {/* > */}
+      {/* <MyContext.Consumer>
+          {value => {
+            return (
+              <div>
+                <h2>현재 선택된 언어 : {value.language}</h2>
+                <select
+                  value={value.language}
+                  onChange={e => value.setLanguage(e.target.value)}
+                >
+                  <option value="ko">한국어</option>
+                  <option value="en">영어</option>
+                  <option value="jp">일본어</option>
+                </select>
+              </div>
+            );
+          }}
+        </MyContext.Consumer> */}
+
+      {/* </MyContext.Provider> */}
     </>
   );
 }
