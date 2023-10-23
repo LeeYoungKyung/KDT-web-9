@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 interface Props {
   name: string;
 }
-
+a;
 interface Data {
   name: string;
   age: number;
@@ -13,6 +13,8 @@ interface Data {
 
 const Types: React.FC<Props> = props => {
   const [count, setCount] = useState<Data | null>();
+  const myInput = useRef<HTMLInputElement>(null);
+
   return <>hello{props.name}</>;
 };
 export default Types;
